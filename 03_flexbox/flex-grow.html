@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 20px;
+      }
+
+      .page-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-color: #12b886;
+      }
+
+      header {
+        background-color: #228be6;
+      }
+
+      main {
+        flex-grow: 1;
+        background-color: #e64980;
+      }
+
+      footer {
+        background-color: #fd7e14;
+      }
+
+      header,
+      main,
+      footer {
+        text-align: center;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>Page header</header>
+      <main>Main content</main>
+      <footer>Page footer</footer>
+    </div>
+  </body>
+</html>

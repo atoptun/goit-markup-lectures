@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        display: flex;
+        gap: 10px;
+        width: 300px;
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+
+        /* Appearance properties of the icon */
+        background-image: url('https://cdn-icons-png.flaticon.com/512/616/616438.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: orangered;
+      }
+
+      .full-icon {
+        flex-shrink: 0;
+      }
+
+      .text {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <span class="icon"></span>
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet earum odio harum! Nulla aliquid quasi facere
+        atque, corrupti voluptatum cupiditate placeat delectus, velit alias dicta praesentium iste amet eos vero.
+      </p>
+    </div>
+    <div class="card">
+      <span class="icon full-icon"></span>
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet earum odio harum! Nulla aliquid quasi facere
+        atque, corrupti voluptatum cupiditate placeat delectus, velit alias dicta praesentium iste amet eos vero.
+      </p>
+    </div>
+  </body>
+</html>

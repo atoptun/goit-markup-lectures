@@ -88,3 +88,153 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 ![align-content](images/image_09.png)
 
+## Flex-items
+
+![Flex-items](images/image_10.png)
+
+### flex-basis
+
+Властивість `flex-basis` визначає початковий розмір flex-елемента у flex-контейнері.
+Початковий розмір — це розмір до застосування властивостей `flex-grow` і `flex-shrink`, які також впливатимуть на розмір елементів відносно один одного.
+
+```css
+flex-basis: auto | значення
+```
+
+Якщо застосовано обидві властивості, `flex-basis` і `width`, то властивість `width` ігнорується.
+Властивість `flex-basis` може визначати висоту, а не ширину елемента. Це відбувається, коли напрямок головної осі вертикальний.
+Властивості `min-width` і `max-width` працюють, як обмежувачі розміру елемента, навіть якщо у нього вказано `flex-basis`.
+Властивість `flex-basis` — це не фінальний розмір елемента, а розмір до розподілу вільного простору, який регулюється властивостями `flex-grow` і `flex-shrink`.
+
+### flex-grow
+
+Властивість `flex-grow` — визначає здатність елемента займати більше місця (рости), ніж початковий розмір. Значення визначається як пропорція (частка) вільного місця в контейнері.
+
+```css
+flex-grow: частка
+```
+
+![flex-grow](images/image_11.gif)
+
+[Example (flex-grow.html)](03_flexbox/flex-grow.html)
+
+### flex-shrink
+
+На противагу властивості `flex-grow`, `flex-shrink` визначає здатність flex-елемента займати менше місця (стискатися), ніж його початковий розмір, тобто впливає на фінальний розмір елемента.
+
+```css
+flex-shrink: значення;
+```
+
+![flex-shrink](images/image_12.gif)
+
+[Example (flex-shrink.html)](03_flexbox/flex-shrink.html)
+
+### align-self
+
+Властивість `align-self` дозволяє елементу змінити своє розташування на cross axis, перевизначивши собі значення властивості `align-items` від контейнера.
+
+```css
+align-self: auto | flex-start | flex-end | center | baseline | stretch
+```
+
+![align-self](images/image_13.png)
+
+[Example (align-self.html)](03_flexbox/align-self.html)
+
+### order
+
+Використовуючи властивість order можна візуально змінити порядок розташування елементів уздовж main axis. При цьому в HTML-коді нічого не зміниться. За замовчуванням всі елементи мають значення 0.
+
+```css
+order: позиція;
+```
+
+![order](images/image_14.png)
+
+## Pseudo-classes
+
+### :first-child і :last-child
+
+![:first-child і :last-child](images/image_15.png)
+
+Problem
+
+![problem](images/image_16.png)
+
+```css
+/* solution 1 */
+
+.list-item {
+  margin-bottom: 12px;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+```
+
+### :not()
+
+Псевдоклас `:not()` дозволяє вибрати всі елементи, що не підходять під критерій.
+
+Критерій вказується у вигляді простого селектора, записаного в дужках. Простий селектор — це універсальний селектор, селектор типу, ідентифікатора, атрибута, класу чи псевдокласу.
+
+```css
+:not(selector)
+```
+
+```css
+/* solution 2 */
+
+.list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+```
+
+### :nth-child(an + b)
+
+Псевдоклас `:nth-child(an + b)` вибирає елементи в колекції сусідів за номером, вказаним у дужках, за допомогою циклу `an + b`, який дозволяє задати правило для послідовності елементів.
+
+```html
+<ul class="list">
+  <li class="list-item">1</li>
+  <li class="list-item">2</li>
+  <li class="list-item">3</li>
+  <li class="list-item">4</li>
+  <li class="list-item">5</li>
+  <li class="list-item">6</li>
+  <li class="list-item">7</li>
+  <li class="list-item">8</li>
+  <li class="list-item">9</li>
+  <li class="list-item">10</li>
+</ul>
+```
+
+```css
+.list-item:nth-child(2n) {
+  background-color: orange;
+}
+
+/* Аналогічно використовуючи псевдонім */
+.list-item:nth-child(even) {
+  background-color: orange;
+}
+```
+
+![:nth-child(even)](images/image_17.png)
+
+```css
+.list-item:nth-child(2n + 1) {
+  background-color: orange;
+}
+
+/* Аналогічно використовуючи псевдонім */
+.list-item:nth-child(odd) {
+  background-color: orange;
+}
+```
+
+![:nth-child(odd)](images/image_18.png)
+
+
