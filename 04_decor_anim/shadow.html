@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border shadow example</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #212121;
+        font-size: 14px;
+        background-color: #fff;
+        line-height: 1.5;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .club-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .club-list .item {
+        flex-basis: calc((100% - 32px) / 3);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow:
+          0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+          0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .club-list .content {
+        padding: 8px;
+      }
+
+      .club-list .title {
+        margin-bottom: 8px;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 1.333;
+      }
+
+      .club-list .link {
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="club-list">
+        <li class="item">
+          <img
+            src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B031.jpg"
+            width="320"
+            alt="PF Power Zone. A modern gym equipped with treadmills."
+          />
+          <div class="content">
+            <h3 class="title">PF Power Zone</h3>
+            <p class="text">
+              With full access membership you'll gain access to our state of the art gym floor and become a part of a
+              supportive fitness community. Feel confident and strong, with equipment to challenge every level of
+              fitness.
+            </p>
+            <a href="https://goo.gl/maps/qBnEfK5AingPLZgb9" target="_blank" class="link"> Open in Google Maps </a>
+          </div>
+        </li>
+        <li class="item">
+          <img
+            src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B032.jpg"
+            width="320"
+            alt="PF Fit and Fast. A gym with indoor bikes behind a glass door."
+          />
+          <div class="content">
+            <h3 class="title">PF Fit and Fast</h3>
+            <p class="text">
+              Small group training combines the focused attention of a private session with the energy of a group. With
+              up to 5 people, the groups have their own program, training area and equipment.
+            </p>
+            <a href="https://goo.gl/maps/WZ4K6XMvHU7FkgWB7" target="_blank" class="link"> Open in Google Maps </a>
+          </div>
+        </li>
+        <li class="item">
+          <img
+            src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B033.jpg"
+            width="320"
+            alt="PF Body Sculpting. A studio with fitness balls and trx straps."
+          />
+          <div class="content">
+            <h3 class="title">PF Body Sculpting</h3>
+            <p class="text">
+              Our 1 on 1 private training is the best choice for people looking for a personalized program based on
+              their goals. You will have your own training room with one of our experienced fitness coaches.
+            </p>
+            <a href="https://goo.gl/maps/UZqkiUqS6eWL5DJd7" target="_blank" class="link"> Open in Google Maps </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

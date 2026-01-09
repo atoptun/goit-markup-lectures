@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9fd;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        background-color: tomato;
+        box-shadow:
+          0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+        /*  Set transition values  */
+        transition-property: background-color, transform;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+        transition-delay: 0;
+      }
+
+      /* On hover, change the values of animated properties */
+      .box:hover {
+        background-color: teal;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

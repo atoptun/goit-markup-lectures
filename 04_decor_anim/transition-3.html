@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #212121;
+        font-size: 14px;
+        background-color: #fff;
+        line-height: 1.5;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .page-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        margin-bottom: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: #e0e0e0;
+        background-image: linear-gradient(to right, #03a9f4, #212121);
+      }
+
+      .page-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .page-nav {
+        display: flex;
+        gap: 8px;
+      }
+
+      .page-nav .link {
+        display: block;
+        padding: 4px 8px;
+        border-radius: 2px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        transition:
+          color 150ms ease-in-out 0ms,
+          background-color 150ms ease-in-out 150ms;
+      }
+
+      .page-nav .link:hover,
+      .page-nav .link:focus {
+        color: #f44336;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <a href="/" class="page-logo">
+          <img
+            src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/b04pflogo.svg"
+            width="40"
+            height="40"
+            alt="Planet Fatness logo"
+          />
+        </a>
+
+        <nav>
+          <ul class="page-nav">
+            <li><a href="#clubs" class="link">Our Clubs</a></li>
+            <li><a href="#benefits" class="link">PF Benefits</a></li>
+            <li><a href="#programs" class="link">Tips and Programs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

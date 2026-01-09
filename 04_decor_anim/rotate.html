@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-shadow:
+          0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .box::before {
+        display: inline-block;
+        font-size: 20px;
+      }
+
+      .box:nth-child(1) {
+        /*   transform: rotate(30deg); */
+        background-color: orange;
+
+        animation: animate30 3000ms infinite 1000ms;
+      }
+
+      .box:nth-child(1)::before {
+        content: 'rotate(30deg)';
+      }
+
+      .box:nth-child(2) {
+        /*   transform: rotate(115deg); */
+        background-color: #03a9f4;
+
+        animation: animate115 3000ms infinite 1000ms;
+      }
+
+      .box:nth-child(2)::before {
+        content: 'rotate(115deg)';
+      }
+
+      .box:nth-child(3) {
+        /*   transform: rotate(-45deg); */
+        background-color: palevioletred;
+
+        animation: animate45 3000ms infinite 1000ms;
+      }
+
+      .box:nth-child(3)::before {
+        content: 'rotate(-45deg)';
+      }
+
+      @keyframes animate30 {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(30deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      @keyframes animate115 {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(115deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      @keyframes animate45 {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(-45deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

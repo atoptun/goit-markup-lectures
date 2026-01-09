@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Planet Fatness description meta tag content" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Planet Fatness is the place for beginners and pros!</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        color: #212121;
+        font-size: 14px;
+        background-color: #ffffff;
+        line-height: 1.5;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        font-family: 'Oswald', sans-serif;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .page-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        margin-bottom: 20px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: #e0e0e0;
+        background-image: linear-gradient(to right, #03a9f4, #212121);
+      }
+
+      .page-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .page-nav {
+        display: flex;
+        gap: 8px;
+      }
+
+      .page-nav .link {
+        display: block;
+        padding: 4px 8px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .page-nav .link:hover,
+      .page-nav .link:focus,
+      .page-nav .link:active {
+        color: #f44336;
+      }
+
+      .hero {
+        padding: 48px;
+        border-radius: 12px;
+        background-color: #212121;
+        background-image:
+          linear-gradient(to bottom, rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15)),
+          url(https://cdn.pixabay.com/photo/2016/11/22/22/24/adult-1850925_1280.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        color: #ffffff;
+      }
+
+      .hero-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 1.333;
+        letter-spacing: 3px;
+      }
+
+      .hero-title::before,
+      .hero-title::after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background-color: #ffffff;
+      }
+
+      .hero-title:hover::before,
+      .hero-title:hover::after {
+        background-color: #03a9f4;
+      }
+
+      .section {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px dashed #212121;
+      }
+
+      .section-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.333;
+        letter-spacing: 1px;
+      }
+
+      .section-text {
+        line-height: 1.5;
+        text-indent: 24px;
+      }
+
+      .club-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .club-list .item {
+        position: relative;
+        flex-basis: calc((100% - 32px) / 3);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow:
+          0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+          0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .club-list .content {
+        padding: 8px;
+      }
+
+      .club-list .title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        color: #ffffff;
+        background-color: #0288d1;
+        margin-bottom: 8px;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 1.333;
+      }
+
+      .club-list .link {
+        color: #03a9f4;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      .club-list .link:hover,
+      .club-list .link:focus {
+        color: #0288d1;
+      }
+
+      .club-list .link:active {
+        color: #f44336;
+      }
+
+      .benefits {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .benefits li {
+        flex-basis: calc((100% - 32px) / 3);
+      }
+
+      .downloads {
+        margin-top: 20px;
+      }
+
+      .downloads li:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      .downloads .link {
+        color: #03a9f4;
+        text-decoration: none;
+      }
+
+      .downloads .link:hover,
+      .downloads .link:focus {
+        color: #0288d1;
+        text-decoration: underline;
+      }
+
+      .downloads .link:active {
+        color: #f44336;
+      }
+
+      .page-footer {
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #212121;
+      }
+
+      .page-footer .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .copyright-text {
+        flex-basis: 300px;
+        color: #ffffff;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+        align-self: flex-end;
+      }
+
+      .manager-chat-btn {
+        position: fixed;
+        bottom: 32px;
+        right: 32px;
+        z-index: 999;
+        padding: 12px 16px;
+        border: none;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: #03a9f4;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow:
+          rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+          rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+          rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+      }
+
+      .manager-chat-btn:hover {
+        background-color: #0288d1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <a href="/">
+          <img
+            src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/b04pflogo.svg"
+            width="40"
+            height="40"
+            alt="Planet Fatness logo"
+          />
+        </a>
+
+        <nav>
+          <ul class="page-nav">
+            <li><a href="#clubs" class="link">Our Clubs</a></li>
+            <li><a href="#benefits" class="link">PF Benefits</a></li>
+            <li><a href="#programs" class="link">Tips and Programs</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <button type="button" class="manager-chat-btn">Contact manager</button>
+
+      <div class="container">
+        <div class="hero">
+          <h1 class="hero-title">Planet Fatness</h1>
+          <p>
+            Healthy food is delicious. Doing sport is enjoyable. You just need to start - people said. Nonsense! - I
+            thought. To me, a 19-year-old guy, overweight and depressed, who ate tons of junk food to seize the stress,
+            those healthy-life-gurus sounded like aliens coming from another planet. On their planet, it must have
+            sounded right. On my planet, eating pizza was OK and jogging was exhausting. 12 years later, after I shed
+            almost 100 pounds and completely changed my diet, I still believe we WERE on different planets. The thing is
+            that once I escaped.
+          </p>
+        </div>
+      </div>
+
+      <section class="section container">
+        <h2 id="clubs" class="section-title">Find us near you</h2>
+        <p class="section-text">
+          Get healthy, feel strong, and be happy! With 50+ classes on the menu, including HIIT classes, group fitness,
+          and Personal Training, we have something for every taste. All the gyms and fitness studios in our chain are
+          well-equipped facilities where you'll find all the amenities from WiFi, lockers and towels to sauna and
+          jacuzzi. Our fitness bars are here to help you relax and refuel after your workout. The menu offers smoothies.
+          soups, salads, and other healthy snacks prepared fresh daily. See where we're currently operating.
+        </p>
+
+        <ul class="club-list">
+          <li class="item">
+            <img
+              src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B031.jpg"
+              width="320"
+              alt="PF Power Zone. A modern gym equipped with treadmills."
+            />
+            <div class="content">
+              <h3 class="title">PF Power Zone</h3>
+              <p class="text">
+                With full access membership you'll gain access to our state of the art gym floor and become a part of a
+                supportive fitness community. Feel confident and strong, with equipment to challenge every level of
+                fitness.
+              </p>
+              <a href="https://goo.gl/maps/qBnEfK5AingPLZgb9" target="_blank" class="link"> Open in Google Maps </a>
+            </div>
+          </li>
+          <li class="item">
+            <img
+              src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B032.jpg"
+              width="320"
+              alt="PF Fit and Fast. A gym with indoor bikes behind a glass door."
+            />
+            <div class="content">
+              <h3 class="title">PF Fit and Fast</h3>
+              <p class="text">
+                Small group training combines the focused attention of a private session with the energy of a group.
+                With up to 5 people, the groups have their own program, training area and equipment.
+              </p>
+              <a href="https://goo.gl/maps/WZ4K6XMvHU7FkgWB7" target="_blank" class="link"> Open in Google Maps </a>
+            </div>
+          </li>
+          <li class="item">
+            <img
+              src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/B033.jpg"
+              width="320"
+              alt="PF Body Sculpting. A studio with fitness balls and trx straps."
+            />
+            <div class="content">
+              <h3 class="title">PF Body Sculpting</h3>
+              <p class="text">
+                Our 1 on 1 private training is the best choice for people looking for a personalized program based on
+                their goals. You will have your own training room with one of our experienced fitness coaches.
+              </p>
+              <a href="https://goo.gl/maps/UZqkiUqS6eWL5DJd7" target="_blank" class="link"> Open in Google Maps </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section container">
+        <h2 id="benefits" class="section-title">Why choose Planet Fatness?</h2>
+        <p class="section-text">
+          We're bringing accessible, on-trend fitness to everyone! We are more than just a gym - we are a community. We
+          are the crew to help you reach the goals.
+        </p>
+        <ol class="benefits">
+          <li>
+            No blames, no empty promises, no people who are talking about things they don't know about. Our mission is
+            to create a safe space for you to change.
+          </li>
+          <li>
+            All our coaches are certified experts. You may have tried to work hard but we'll teach you to work smart.
+          </li>
+          <li>
+            Your diet is no less important than your training. We believe in an integrated approach which also includes
+            dietitian's consultations and motivational activities.
+          </li>
+          <li>
+            Healthy menu require time and effort? Not in our healthy food bars. Let's discover the world of tasty
+            low-calorie dishes.
+          </li>
+          <li>You pay for reaching your goal. And it's our job to help you reach it as soon as possible.</li>
+        </ol>
+      </section>
+
+      <section class="section container">
+        <h2 id="programs" class="section-title">How to stop doubting and start exercising regularly</h2>
+        <p class="section-text">
+          Thousands of people dream about having a nice body. They start doing sport, face challenges and quit it in a
+          few weeks or even days. Why does it happen? The problem is that people often do too much physical activity
+          when their body is not ready for this load. Without allowing any recovery time between exercise sessions, they
+          get tired quickly and lose motivation. We believe that you should have a smooth start and focus on developing
+          a habit of doing sport regularly. So, we offer you a few training programs for beginners.
+        </p>
+
+        <ul class="downloads">
+          <li>
+            <a
+              href="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/Build-Muscles.pdf"
+              download="build-muscles-plan"
+              class="link"
+            >
+              Download «Build Muscles» training plan
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/Burn-Fat.pdf"
+              download="burn-fat-plan"
+              class="link"
+            >
+              Download «Burn Fat» training plan
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/Build-Strength&Mass.pdf"
+              download="strength-and-mass-plan"
+              class="link"
+            >
+              Download «Build Strength and Mass» training plan
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <ul class="social-links">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img
+                src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/b04insta.svg"
+                width="32"
+                height="32"
+                alt="Instagram"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img
+                src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/b04facebook.svg"
+                width="32"
+                height="32"
+                alt="Facebook"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank">
+              <img
+                src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/b04youtube.svg"
+                width="32"
+                height="32"
+                alt="YouTube"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <p class="copyright-text">
+          &copy;2023 ARST Planet Fatness, Ltd. All rights reserved. Unless otherwise indicated, all materials on the
+          page are copyrighted by ARST Planet Fatness, Limited. All rights reserved. No part of this page, either text
+          or image may be used for any purpose.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

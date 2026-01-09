@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo elelements example</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #212121;
+        font-size: 14px;
+        background-color: #fff;
+        line-height: 1.5;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding: 48px;
+        border-radius: 12px;
+        background-color: #212121;
+        background-image:
+          linear-gradient(to bottom, rgba(0, 0, 255, 0.15), rgba(0, 0, 255, 0.15)),
+          url(https://ac.goit.global/fullstack/html-css-v2/module-4/autochecks/m04-human.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        color: #fff;
+      }
+
+      .hero-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 1.333;
+        letter-spacing: 3px;
+      }
+
+      .hero-title::before,
+      .hero-title::after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      .hero-title:hover::before,
+      .hero-title:hover::after {
+        background-color: #03a9f4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <h1 class="hero-title">Planet Fatness</h1>
+        <p>
+          Healthy food is delicious. Doing sport is enjoyable. You just need to start - people said. Nonsense! - I
+          thought. To me, a 19-year-old guy, overweight and depressed, who ate tons of junk food to seize the stress,
+          those healthy-life-gurus sounded like aliens coming from another planet. On their planet, it must have sounded
+          right. On my planet, eating pizza was OK and jogging was exhausting. 12 years later, after I shed almost 100
+          pounds and completely changed my diet, I still believe we WERE on different planets. The thing is that once I
+          escaped.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
